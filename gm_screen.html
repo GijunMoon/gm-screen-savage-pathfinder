@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder for Savage Worlds GM Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="gm-screen-page" id="page-one">
+        <div class="column">
+            <div class="section distribute-content">
+                <h2>Situational Rules</h2>
+                <p><strong>Aim:</strong> Spend a turn aiming a ranged weapon. On the next turn, ignore up to
+                    <strong>-4</strong> points of penalties (Range, Cover, Called Shot, Scale) or add
+                    <strong>+2</strong> to the roll. Cannot take other actions while aiming.</p>
+                <p><strong>Area Effect Attacks:</strong> Place the template and make an arcane skill or Shooting roll.
+                    Targets in the template can attempt to Evade. Missed attacks may Deviate.</p>
+                <p><strong>Breaking Free:</strong> From a grapple is an opposed Athletics roll. From a device is a
+                    Strength roll, often with a penalty.</p>
+                <p><strong>Called Shots:</strong> Attack a specific location for an effect. Penalties are: Limb
+                    (<strong>-2</strong>), Head/Vitals (<strong>-4</strong>), Hand/Eye (<strong>-6</strong>). Success
+                    causes a specific extra effect (e.g., target drops item, is Distracted).</p>
+                <p><strong>Defend:</strong> Gain <strong>+4</strong> Parry but take no other actions that turn.</p>
+                <p><strong>Desperate Attack:</strong> Gain <strong>+2</strong> to an attack roll (Athletics, Fighting,
+                    or Shooting) but suffer <strong>-2</strong> to the damage roll.</p>
+                <p><strong>Disarm:</strong> A Called Shot (<strong>-2</strong>) to a foe's weapon. If successful, make
+                    an opposed Strength roll. If the attacker wins, the foe drops the weapon.</p>
+                <p><strong>Deviation:</strong> A missed area effect may deviate. Thrown items deviate 1d6", projectiles 2d6". Multiply distance by 2 for Medium, 3 for Long, and 4 for Extreme Range. Roll a d12 for direction (like a clock face). A weapon can't deviate more than half the distance to the original target.</p>
+                <p><strong>Evasion:</strong> Make an Agility roll at <strong>-2</strong> to avoid area effect attacks.
+                    Success halves damage; a raise avoids it completely.</p>
+                <p><strong>Finishing Move:</strong> A free attack against a helpless foe (<strong>+4</strong> to hit). A
+                    successful damage roll slays the target, regardless of Wounds.</p>
+                <p><strong>Firing into Melee:</strong> If a ranged attack misses its intended target, a random target
+                    adjacent to the original (friend or foe) is hit instead on a <strong>1</strong> on the attack die.
+                </p>
+                <p><strong>Ganging Up:</strong> Foes gain <strong>+1</strong> to their Fighting rolls for each
+                    additional adjacent attacker, up to a maximum of <strong>+4</strong>.</p>
+                <p><strong>Grappling:</strong> An opposed Athletics roll to initiate. Success makes the target
+                    Vulnerable. A raise makes the target Bound.</p>
+                <p><strong>Hold:</strong> Postpone your action until later in the round. You can interrupt another
+                    character's action by winning an opposed Athletics roll.</p>
+                <p><strong>Illumination:</strong> Apply penalties to tasks requiring vision. Dim Light (e.g., twilight)
+                    is <strong>-2</strong>. Dark (starless night) is <strong>-4</strong>. Pitch Black is
+                    <strong>-6</strong>.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section section-no-header distribute-content">
+                <p><strong>Improvised Weapons:</strong> Suffer a <strong>-2</strong> penalty to attack and Parry rolls.
+                    Damage is typically Str+d4, with a max of Str+d6.</p>
+                <p><strong>Innocent Bystanders:</strong> If a ranged attack misses and the attack die is a
+                    <strong>1</strong>, a random bystander within 1" of the target is hit instead.</p>
+                <p><strong>Mounted Combat:</strong> Mounted attackers get <strong>+1</strong> Fighting vs foot soldiers.
+                    Riders must make a Riding roll to stay mounted when their mount is Shaken or Wounded.</p>
+                <p><strong>Nonlethal Damage:</strong> Declare before the attack. A foe who takes a Wound from a
+                    nonlethal attack must make a Vigor roll or be knocked unconscious.</p>
+                <p><strong>Off-Hand Attacks:</strong> Attacks made with the off-hand suffer a <strong>-2</strong>
+                    penalty.</p>
+                <p><strong>Push:</strong> An opposed Strength roll. Success pushes the foe 1", plus 1" for each raise.
+                    If pushed into an object, they may become Shaken.</p>
+                <p><strong>Ranged Weapons in Melee:</strong> The intended target adds <strong>+2</strong> to their
+                    Parry. Firing at another target requires an opposed Agility roll against all adjacent foes.</p>
+                <p><strong>Reloading:</strong> A weapon with a Reload value takes that many actions to reload.</p>
+                <p><strong>Rest:</strong> A full night of rest (approx. 8 hours) removes all levels of Fatigue. Sleeping
+                    in
+                    medium or heavy armor may prevent recovery and might even cause a level of Fatigue.</p>
+                <p><strong>Surprise & The Drop:</strong> Surprised characters must make a Notice roll or be Shaken. If
+                    an attacker has The Drop, they add <strong>+4</strong> to their attack and damage rolls, and the
+                    target is Vulnerable.</p>
+                <p><strong>Test:</strong> An opposed roll (e.g., Taunt vs. Smarts or Intimidation vs. Spirit) to make a
+                    foe Distracted or Vulnerable.</p>
+                <p><strong>Touch Attack:</strong> <strong>+2</strong> to a Fighting roll to simply touch a foe (often to
+                    deliver a power).</p>
+                <p><strong>Unstable Platform:</strong> <strong>-2</strong> penalty to most actions when on an unstable
+                    surface.</p>
+                <p><strong>Wild Attack:</strong> Add <strong>+2</strong> to a Fighting attack and damage roll, but
+                    reduce Parry by <strong>-2</strong> until your next action.</p>
+                <p><strong>Note:</strong> The <strong>+2</strong> bonus from Desperate Attack and Wild Attack do not stack with each other.</p>
+                <p><strong>Withdrawing from Melee:</strong> Any adjacent foe gets a free Fighting attack against a
+                    character who moves out of melee range.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <h2>Attributes & Skills</h2>
+                <p>Characters can attempt skills they don’t have at a default of d4<strong>-2</strong>. This is called
+                    an Unskilled Attempt.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Agility</td>
+                            <td>Athletics, Boating, Driving, Fighting, Piloting, Riding, Shooting, Stealth, Thievery
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Smarts</td>
+                            <td>Academics, Battle, Common Knowledge, Gambling, Healing, Notice, Occult, Repair, Science,
+                                Spellcasting, Survival, Taunt</td>
+                        </tr>
+                        <tr>
+                            <td>Spirit</td>
+                            <td>Faith, Intimidation, Performance, Persuasion</td>
+                        </tr>
+                        <tr>
+                            <td>Strength</td>
+                            <td>(None)</td>
+                        </tr>
+                        <tr>
+                            <td>Vigor</td>
+                            <td>(None)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Range Penalties</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Range</th>
+                            <th>Penalty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Short</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <td>Long</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>Extreme</td>
+                            <td>-8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Area of Effect Templates</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Template</th>
+                            <th>Diameter</th>
+                            <th>Targets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Small</td>
+                            <td>4 yards</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>8 yards</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td>12 yards</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Cone</td>
+                            <td>18-yard cone</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Stream</td>
+                            <td>24x2 yard line</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Cover & Obstacles</h2>
+                <p><strong>Cover:</strong> Subtract the cover bonus from the attack roll.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Penalty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Light (bush, concealment)</td>
+                            <td>-2</td>
+                        </tr>
+                        <tr>
+                            <td>Medium (wall corner, tree)</td>
+                            <td>-4</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy (bunker slit, ledge)</td>
+                            <td>-6</td>
+                        </tr>
+                        <tr>
+                            <td>Near Total</td>
+                            <td>-8</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Hardness:</strong> Armor values of common materials.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Hardness (Armor)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Light (Glass, Rope, Ice)</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>Medium (Wood, Leather)</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy (Steel, Iron)</td>
+                            <td>+6</td>
+                        </tr>
+                        <tr>
+                            <td>Reinforced (Stone, Concrete)</td>
+                            <td>+8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Obstacles</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Obstacle</th>
+                            <th>Toughness</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Light Door</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Door</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Reinforced Door</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Brick Wall</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Stone Wall</td>
+                            <td>16</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Scale Modifiers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modifier</th>
+                            <th>Scale & Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>−6</td>
+                            <td>Tiny: Armor joint, baseball, mouse</td>
+                        </tr>
+                        <tr>
+                            <td>−4</td>
+                            <td>Very Small: Human hand or head, basketball, house cat</td>
+                        </tr>
+                         <tr>
+                            <td>−2</td>
+                            <td>Small: Human limb, bobcat</td>
+                        </tr>
+                        <tr>
+                            <td>—</td>
+                            <td>Normal: Human, bull, horse</td>
+                        </tr>
+                         <tr>
+                            <td>+2</td>
+                            <td>Large: Hippo, most vehicles</td>
+                        </tr>
+                         <tr>
+                            <td>+4</td>
+                            <td>Huge: Dragon, whale</td>
+                        </tr>
+                         <tr>
+                            <td>+6</td>
+                            <td>Gargantuan: Building, kaiju, ship</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="gm-screen-page" id="page-two">
+        <div class="column">
+            <div class="section">
+                <h2>Magic & Powers</h2>
+                <p><strong>Activation:</strong> Make an arcane skill roll. Failure costs <strong>1</strong> Power Point
+                    and the power fails. Success activates the power and consumes its Power Point cost.</p>
+                <p><strong>Backlash:</strong> A Critical Failure on an activation roll causes a level of Fatigue and all
+                    active powers instantly terminate.</p>
+                <p><strong>Maintaining:</strong> Spend <strong>1</strong> Power Point to extend a power by its base
+                    Duration.</p>
+                <p><strong>Recharging:</strong> Recover <strong>5</strong> Power Points per hour of rest. May also spend
+                    a Benny to regain <strong>5</strong> Power Points as a free action.</p>
+                <p><strong>Cantrips:</strong> An Arcane Background user can perform minor magical effects based on a
+                    known power with an arcane skill roll. The effect cannot cause damage.</p>
+                <p><strong>Magical Healing:</strong> The <em>healing</em> power removes one Wound on a success and two
+                    with a raise on the arcane skill roll.</p>
+            </div>
+            <div class="section">
+                <h2>Power Modifiers</h2>
+                <p><em>Power Modifiers must be declared before making the arcane skill roll to activate the power.</em></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Modifier</th>
+                            <th>Cost</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Armor Piercing</td>
+                            <td><strong>+1-3</strong></td>
+                            <td>AP 2 per PP (max 6)</td>
+                        </tr>
+                        <tr>
+                            <td>Fatigue</td>
+                            <td><strong>+2</strong></td>
+                            <td>Target suffers Fatigue</td>
+                        </tr>
+                        <tr>
+                            <td>Glow/Shroud</td>
+                            <td><strong>+1</strong></td>
+                            <td>Glow (-2 Stealth) or Shroud (-1 to hit)</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Weapon</td>
+                            <td><strong>+2</strong></td>
+                            <td>Counts as Heavy Weapon</td>
+                        </tr>
+                        <tr>
+                            <td>Hinder/Hurry</td>
+                            <td><strong>+1</strong></td>
+                            <td>Target Pace +/-2</td>
+                        </tr>
+                        <tr>
+                            <td>Lingering Dmg</td>
+                            <td><strong>+2</strong></td>
+                            <td>Damage again next turn (-1 die type)</td>
+                        </tr>
+                        <tr>
+                            <td>Range</td>
+                            <td><strong>+1/2</strong></td>
+                            <td>Double (+1) or triple (+2) range</td>
+                        </tr>
+                        <tr>
+                            <td>Selective</td>
+                            <td><strong>+1</strong></td>
+                            <td>Exclude targets in AoE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Quick Encounters</h2>
+                <p>Used to resolve a scene with a single skill roll per character instead of round-by-round action. The GM describes the scene, players state their actions and choose a skill, then roll. Success is determined narratively.</p>
+                <p><strong>Suggested Skills by Type:</strong></p>
+                <ul>
+                    <li><strong>Combat:</strong> Fighting, Shooting, arcane skill</li>
+                    <li><strong>Crisis:</strong> Athletics, Persuasion, Repair</li>
+                    <li><strong>Heist/Mission:</strong> Stealth, Thievery, Notice, Battle</li>
+                    <li><strong>Trek:</strong> Survival, Notice, Common Knowledge</li>
+                </ul>
+                <p><strong>Modifiers:</strong> The GM assigns a modifier from -4 (very hard) to +4 (very easy) based on the situation, opposition, and equipment.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section distribute-content">
+                <h2>Conditions</h2>
+                <p><strong>Bleeding Out:</strong> Incapacitated characters must make a Vigor roll at the start of their
+                    turn. Failure means death. A success keeps them alive. A raise stabilizes them.</p>
+                <p><strong>Bound:</strong> Cannot move or perform any physical action. Parry is <strong>2</strong>. Can
+                    attempt to break free with a Strength or Agility roll.</p>
+                <p><strong>Disarmed:</strong> The character has dropped a held item. They must take an action to recover
+                    it.</p>
+                <p><strong>Distracted:</strong> Suffer <strong>-2</strong> to all Trait rolls. Removed at end of turn if
+                    no other action is taken.</p>
+                <p><strong>Entangled:</strong> As Bound, but may attempt to break free with a Strength roll at
+                    <strong>-2</strong>.</p>
+                <p><strong>Fatigued:</strong> <strong>-1</strong> penalty to all Trait rolls. A second level of Fatigue
+                    becomes Exhausted (<strong>-2</strong>). A third level results in Incapacitation.</p>
+                <p><strong>Grappled:</strong> A grappled character is Vulnerable. If the attacker got a raise, the character
+                    is Bound instead.</p>
+                <p><strong>Incapacitated:</strong> Cannot perform any actions and is removed from combat.</p>
+                <p><strong>Natural Healing:</strong> After the “Golden Hour,” characters make a Vigor roll every five
+                    days to
+                    heal. A success removes one Wound, and a raise removes two.</p>
+                <p><strong>Poisoned:</strong> Suffer effects of a poison. Usually requires a Vigor roll to resist. Effects
+                    can include Fatigue, damage, or attribute penalties.</p>
+                <p><strong>Prone:</strong> <strong>-2</strong> to Parry. Melee attacks against are at
+                    <strong>+2</strong>; ranged attacks are at <strong>-4</strong>.</p>
+                <p><strong>Shaken:</strong> Cannot take actions. At the start of their turn, they must make a Spirit roll
+                    to recover. A success removes Shaken. A raise removes Shaken and allows them to act.</p>
+                <p><strong>Stunned:</strong> Prone, <strong>-2</strong> Parry, cannot act or move. At start of turn, make
+                    a Spirit roll to recover (at -2 if from physical damage).</p>
+                <p><strong>Vulnerable:</strong> All actions against the target are at <strong>+2</strong>. Lasts until
+                    the end of their next turn.</p>
+                <p><strong>Wounded:</strong> Each Wound inflicts a <strong>-1</strong> penalty to Pace and all Trait
+                    rolls (max <strong>-3</strong>). Three Wounds means Incapacitated. Within the “Golden Hour” (1
+                    hr of injury), a Healing roll can remove one Wound (two on a raise).</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <h2>Creative Combat</h2>
+                <p><em>When you get a raise on an attack roll, you can make the target Shaken as normal, or roll on the
+                        table below for a more dynamic result.</em></p>
+                <p><strong>2d6 Roll Table</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll</th>
+                            <th>Result</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Second Wind</strong></td>
+                            <td>Remove 1 Fatigue/Wound. If none, foe is Shaken & hero gets Benny.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>Inspiration</strong></td>
+                            <td>Hero gains a Benny.</td>
+                        </tr>
+                        <tr>
+                            <td>4–5</td>
+                            <td><strong>Double Whammy</strong></td>
+                            <td>Target is Distracted & Vulnerable.</td>
+                        </tr>
+                        <tr>
+                            <td>6–8</td>
+                            <td><strong>Shaken</strong></td>
+                            <td>Target is Shaken.</td>
+                        </tr>
+                        <tr>
+                            <td>9–10</td>
+                            <td><strong>Setback</strong></td>
+                            <td>Target suffers a setback (e.g., falls, wastes turn).</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><strong>Insight</strong></td>
+                            <td>Gain +d6 to one Trait roll vs this foe this encounter.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>Seize the Moment</strong></td>
+                            <td>Immediately take another full turn.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Deadly Encounters</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IF THE ENEMY IS...</th>
+                            <th>THE PARTY FACES...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Weaker</td>
+                            <td>Wild Card leader plus three to four Extras per hero.</td>
+                        </tr>
+                        <tr>
+                            <td>About the Same</td>
+                            <td>Wild Card leader plus two Extras per player character.</td>
+                        </tr>
+                        <tr>
+                            <td>Slightly Stronger</td>
+                            <td>Wild Card leader, one Extra per hero plus an additional one for every two heroes.</td>
+                        </tr>
+                        <tr>
+                            <td>Stronger</td>
+                            <td>Wild Card leader plus one Extra per player character.</td>
+                        </tr>
+                        <tr>
+                            <td>Much Stronger</td>
+                            <td>Three to five Extras or one or two powerful Wild Cards.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Lazy DM Principles</h2>
+                <ul>
+                    <li>Let the story unfold at the table.</li>
+                    <li>Set up situations and see what happens.</li>
+                    <li>Be the characters’ biggest fan.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Dramatic Tasks</h2>
+                <p>Used to resolve complex situations under a time limit. The GM sets the skill, number of rounds, and
+                    Task Points needed (usually 5). Each round, characters make a skill roll.</p>
+                <ul>
+                    <li><strong>Success:</strong> Gain 1 Task Point.</li>
+                    <li><strong>Raise:</strong> Gain 2 Task Points.</li>
+                    <li><strong>Failure:</strong> No points. A <strong>Complication</strong> occurs (e.g., -1 penalty to
+                        the next round's roll).</li>
+                    <li><strong>Critical Failure:</strong> Lose one previously earned Task Point (if any). A
+                        Complication also occurs.</li>
+                </ul>
+                <p><strong>Support:</strong> Allies can make Support rolls to aid the primary character. A success adds
+                    <strong>+1</strong> to the lead's roll, and a raise adds <strong>+2</strong> (max total bonus of
+                    <strong>+4</strong>).</p>
+                <p>The party succeeds if they gather enough Task Points in time, and fails if the time runs out.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gm-screen-page" id="page-three">
+        <div class="column">
+            <div class="section">
+                <h2>Names</h2>
+                <p>Lyra, Griffin, Hesper, Orchi, Ianthe, Galahad, Rowan, Sorrel, Orson, Indigo, Harbor, Saffron, Odessa, Corbin, Elara, Zephyr, Elowen, Briar, Ione, Alistair, Calliope, Gawain, Corvus, Ripley, Eira, Wisteria, Endellion, Evander, Kaelen, Sylvan, Bronwyn, Basil, Zephyrine, Leif, Kael, Evadne, Quill, Dunstan, Rowan, Finch, Drake, Bramwell, Pace, Calden, Cassia, Torin, Alden, Linnea, Elwyn, Olwen, Ferelith, Demetria, Hale, Cormac, Vaughn, Guts, Yarrow, Casca, Rue, Niamh, Isolde, Forrest, Harlan, Haven, Heron, Julian, Lark, Linden, Llewelyn, Mercer, Nash, Niall, Oakley, Ocean, Orion, Oswald, Reed, Rhys, Roan, Rohan, Rune, Talon, Teague, Terran, Thorn, Vale, Anya, Arwen, Astrid, Aurelia, Avalon, Beatrix, Belladonna, Briony, Celeste, Clover, Cordelia, Dahlia, Damaris, Echo, Fleur, Freyja, Genevieve, Hazel, Heloise, Imogen, Iris, Juniper, Kerensa, Lavender, Lilac, Maeve, Magnolia, Marlowe, Morgana, Morwenna, Myrtle, Ophelia, Pernilla, Petra, Phoebe, Primrose, Ravenna, Rhiannon, Roisin, Sabine, Seraphina, Tamsin, Thea, Vesper, Willow, Xanthe, Yvaine, Zinnia.</p>
+            </div>
+            <div class="section">
+                <h2>Reactions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>2d6</th>
+                            <th>Initial Reaction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Hostile:</strong> May attack or betray at the first opportunity.</td>
+                        </tr>
+                        <tr>
+                            <td>3-4</td>
+                            <td><strong>Unfriendly:</strong> Won't help without a substantial reward or threat.</td>
+                        </tr>
+                        <tr>
+                            <td>5-6</td>
+                            <td><strong>Uncooperative:</strong> Isn't interested unless there's a clear advantage.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7-8</td>
+                            <td><strong>Neutral:</strong> Expects fair payment for information or services.</td>
+                        </tr>
+                        <tr>
+                            <td>9-10</td>
+                            <td><strong>Cooperative:</strong> Sympathetic; helps for a small fee or favor.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><strong>Friendly:</strong> Goes out of their way to help for fair pay.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><strong>Helpful:</strong> Anxious to help for little or no reward.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Allied Personalities</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>d20</th>
+                            <th>Personality</th>
+                            <th>d20</th>
+                            <th>Personality</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Treacherous</td>
+                            <td>11</td>
+                            <td>Crude</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Cruel</td>
+                            <td>12</td>
+                            <td>Agile</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Old</td>
+                            <td>13</td>
+                            <td>Observant</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Happy</td>
+                            <td>14</td>
+                            <td>Clueless</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Experienced</td>
+                            <td>15</td>
+                            <td>Mysterious</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Gung-Ho</td>
+                            <td>16</td>
+                            <td>Creative</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Lazy</td>
+                            <td>17</td>
+                            <td>Artistic</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Sneaky</td>
+                            <td>18</td>
+                            <td>Fearless</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Bright</td>
+                            <td>19</td>
+                            <td>Cowardly</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Young</td>
+                            <td>20</td>
+                            <td>Heroic</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <h2>Average Travel Times</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Transport</th>
+                            <th>Miles / 8 Hour Day</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foot</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Horse</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Cart (one beast)</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Carriage</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Wagon (per beast)</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Currency & Prices</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>COIN</th>
+                            <th>CP</th>
+                            <th>SP</th>
+                            <th>GP</th>
+                            <th>PP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Copper (cp)</td>
+                            <td>1</td>
+                            <td>1/10</td>
+                            <td>1/100</td>
+                            <td>1/1,000</td>
+                        </tr>
+                        <tr>
+                            <td>Silver (sp)</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1/10</td>
+                            <td>1/100</td>
+                        </tr>
+                        <tr>
+                            <td>Gold (gp)</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>1/10</td>
+                        </tr>
+                        <tr>
+                            <td>Platinum (pp)</td>
+                            <td>1,000</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><em>Bartering is common — most prices are only guidelines and may change depending on demand, availability, or negotiation skill.</em></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Weight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Torch</td>
+                            <td>1 cp</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Meal, common</td>
+                            <td>3 sp</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Inn, poor</td>
+                            <td>2 sp</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Traveler’s outfit</td>
+                            <td>1 gp</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Inn, luxury</td>
+                            <td>2 gp</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Medium Shield</td>
+                            <td>7 gp</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Longsword</td>
+                            <td>15 gp</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Leather Armor</td>
+                            <td>20 gp</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Healer’s kit</td>
+                            <td>50 gp</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Minor healing potion</td>
+                            <td>100 gp</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Item Categories</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>d20</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1–11</td>
+                            <td>Armor & Weapons</td>
+                        </tr>
+                        <tr>
+                            <td>12–13</td>
+                            <td>Rings</td>
+                        </tr>
+                        <tr>
+                            <td>14–16</td>
+                            <td>Rods & Staves</td>
+                        </tr>
+                        <tr>
+                            <td>17–18</td>
+                            <td>Wands</td>
+                        </tr>
+                        <tr>
+                            <td>19–20</td>
+                            <td>Wondrous Items</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Magic Item Availability</h2>
+                <p><em>*Roll for the number of items available.</em></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Potions & Scrolls*</th>
+                            <th>Healing Potions</th>
+                            <th>Other Items*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Village</td>
+                            <td>d6-2</td>
+                            <td>1d4</td>
+                            <td>d4-2</td>
+                        </tr>
+                        <tr>
+                            <td>Town</td>
+                            <td>d6-1</td>
+                            <td>1d4+1</td>
+                            <td>d6-2</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>d6</td>
+                            <td>1d6</td>
+                            <td>d6-1</td>
+                        </tr>
+                        <tr>
+                            <td>Large City</td>
+                            <td>d6+1</td>
+                            <td>1d6+1</td>
+                            <td>d6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <h2>Fear Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>d20*</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1–3</td>
+                            <td><strong>Adrenaline Surge:</strong> The hero acts as if he had a Joker this action!</td>
+                        </tr>
+                        <tr>
+                            <td>4–6</td>
+                            <td><strong>Distracted:</strong> The hero is Distracted until the end of his next turn.</td>
+                        </tr>
+                        <tr>
+                            <td>7–9</td>
+                            <td><strong>Vulnerable:</strong> The target is Vulnerable until the end of his next turn.</td>
+                        </tr>
+                        <tr>
+                            <td>10–12</td>
+                            <td><strong>Shaken:</strong> The character is Shaken.</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><strong>The Mark of Fear:</strong> The hero is Stunned and suffers a minor cosmetic physical alteration (e.g., white streak in hair, eye twitch).</td>
+                        </tr>
+                        <tr>
+                            <td>14–15</td>
+                            <td><strong>Frightened:</strong> Gains Hesitant Hindrance for the encounter. If he already has it, he’s Panicked instead.</td>
+                        </tr>
+                        <tr>
+                            <td>16–17</td>
+                            <td><strong>Panicked:</strong> Immediately moves full Pace plus running die away from the danger and is Shaken.</td>
+                        </tr>
+                        <tr>
+                            <td>18–19</td>
+                            <td><strong>Minor Phobia:</strong> Gains a Minor Phobia Hindrance associated with the trauma.</td>
+                        </tr>
+                        <tr>
+                            <td>20–21</td>
+                            <td><strong>Major Phobia:</strong> Gains the Major Phobia Hindrance.</td>
+                        </tr>
+                        <tr>
+                            <td>22+</td>
+                            <td><strong>Heart Attack:</strong> Make an immediate Vigor roll at –2. Success: Stunned. Failure: Incapacitated and dies in 2d6 rounds. A Healing roll at –4 saves his life.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Mundane Treasures</h2>
+                <p>A small, tarnished silver locket with a faded portrait, 15 gp, A beautifully crafted leather-bound journal with blank pages, 10 gp, A set of weighted dice made from bone, 5 gp, A silver ring shaped like a coiled serpent with tiny emerald eyes, 50 gp, A pouch containing a handful of semi-precious stones (agate, quartz, jasper), 25 gp, An ornate, but slightly rusted, steel dagger with a wire-wrapped hilt, 20 gp, A heavy wool cloak with an embroidered clasp shaped like a wolf's head, 30 gp, A potion flask made of smoked glass, containing an unidentified liquid, 5 gp, A rolled-up map depicting an unknown coastline, drawn on vellum, 40 gp, A single, perfectly preserved owlbear feather, 8 gp, A wooden holy symbol inlaid with mother-of-pearl, 35 gp, A set of artisan's tools for calligraphy, 22 gp, A simple wooden flute that plays beautiful notes, 12 gp, A crystalline shard that hums faintly, 60 gp, A heavy, iron key with a gear-shaped head, 18 gp, A brass spyglass with a cracked lens, 25 gp, A velvet pouch containing three polished obsidian spheres, 45 gp, A necklace of animal teeth and claws, 7 gp, A pair of fine, supple leather gloves, 10 gp, A spell component pouch with dried bat wings and powdered gems, 50 gp, A chipped dragon's tooth, 75 gp, A silk scarf embroidered with celestial patterns, 40 gp.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
